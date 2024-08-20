@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# SMPL Model Files
+data/SMPL_NEUTRAL.pkl
+data/J_regressor_h36m.npy
+
+# Virtual environment
+venv/
+
+# Hydra
+.hydra/
+
+# Lightning logs
+lightning_logs/
+
+# Log files
+eval_3dpw.log
+
+# IDE files
+.idea/
+.vscode/

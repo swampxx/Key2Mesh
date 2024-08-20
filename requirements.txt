@@ -1,0 +1,9 @@
+chumpy==0.70
+joblib==1.2.0
+numpy==1.23.0
+opencv-contrib-python==4.6.0.66
+opencv-python==4.7.0.68
+pytorch-lightning==1.5.8
+smplx==0.1.28
+Hydra==2.5
+hydra-core==1.2.0

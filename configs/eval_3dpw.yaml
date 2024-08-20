@@ -1,0 +1,35 @@
+project_name: "Single-Frame-SMPL-Estimation"
+exp: DomainAdaptation
+run: "target-3dpw"
+hydra:
+  run:
+    dir: experiments/${exp}/${run}
+seed: 1
+data:
+  test:
+    name: "SingleFrame3DPWDataset"
+    dataset_path: ./data/3DPW_test.pt
+    batch_size: 2048
+    worker: 20
+    shuffle: false
+    drop_last: false
+    augmentation: false
+model:
+  name: Key2Mesh
+train:
+  mode: "target"
+  pretrained: ""
+  num_hidden: 1024
+  dom_num_hidden: 1024
+  jitter_aug: True
+  lr: 0.0001
+  critic_lr: 0.0001
+  epoch: 5
+  occ_prob: 0.2
+  k_critic: 10
+  k_fe: 1
+loss:
+  gradient_penalty: 50.0
+  target_joint2d: 10.0
+  domain_loss: 0.1
+  feature_loss: 20.0
