@@ -52,11 +52,12 @@ This code is built on top of the following work:
 ## Citation
 If you find our work useful in your research, please consider citing:
 ```
-@inproceedings{uguz2024mocap,
-  title={MoCap-to-Visual Domain Adaptation for Efficient Human Mesh Estimation from 2D Keypoints},
-  author={Uguz, Bedirhan and Suat, Ozhan and Karagoz, Batuhan and Akbas, Emre},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={1622--1632},
-  year={2024}
+@InProceedings{Uguz_2024_CVPR,
+    author    = {Uguz, Bedirhan and Suat, Ozhan and Karagoz, Batuhan and Akbas, Emre},
+    title     = {MoCap-to-Visual Domain Adaptation for Efficient Human Mesh Estimation from 2D Keypoints},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2024},
+    pages     = {1622-1632}
 }
 ```
