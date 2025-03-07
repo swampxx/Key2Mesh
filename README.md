@@ -30,8 +30,27 @@ You will need to have the following structure:
 * Then, run the following command to install the remaining dependencies: `pip install -r requirements.txt`
 
 ## Demo
+The `demo.py` demonstrates how to estimate and visualize SMPL body models from 2D keypoints. A sample dataset is
+provided, which includes raw images and their corresponding OpenPose outputs, serving as a guide for the expected data
+structure. You can run the demo using the provided example or use your own data by updating the configuration.
 
-_Coming soon..._
+#### Running the Demo with Example Data:
+
+Simply execute the following command: `python demo.py`
+
+#### Using Your Own Data:
+
+1. Extract 2D Keypoints:
+    - Install and run [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) on your images to extract 2D
+      keypoints, and save the results in JSON format.
+2. Organize Your Data:
+    - Structure your data similarly to the example:
+        - Place your raw images in a folder (e.g., your_data/imgs).
+        - Save the corresponding OpenPose outputs (JSON files) in a folder (e.g., your_data/openpose_outs).
+3. Update Configuration:
+    - Modify the input parameters in the configs/demo.yaml file to point to your dataset directory and set image
+      size.
+4. Finally, run the demo: `python demo.py`
 
 ## Evaluation
 
@@ -46,18 +65,18 @@ Then, run the following command: `python eval_3dpw.py`
 ## Acknowledgements
 
 This code is built on top of the following work:
-[J. Song, X. Chen, and O. Hilliges, "Human Body Model Fitting by Learned Gradient Descent," in ECCV, 2020.](https://arxiv.org/abs/2008.08474).
-
+[J. Song, X. Chen, and O. Hilliges, "Human Body Model Fitting by Learned Gradient Descent," in ECCV, 2020.](https://arxiv.org/abs/2008.08474)
 
 ## Citation
+
 If you find our work useful in your research, please consider citing:
 ```
 @InProceedings{Uguz_2024_CVPR,
-    author    = {Uguz, Bedirhan and Suat, Ozhan and Karagoz, Batuhan and Akbas, Emre},
-    title     = {MoCap-to-Visual Domain Adaptation for Efficient Human Mesh Estimation from 2D Keypoints},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
-    month     = {June},
-    year      = {2024},
-    pages     = {1622-1632}
+  author    = {Uguz, Bedirhan and Suat, Ozhan and Karagoz, Batuhan and Akbas, Emre},
+  title     = {MoCap-to-Visual Domain Adaptation for Efficient Human Mesh Estimation from 2D Keypoints},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+  month     = {June},
+  year      = {2024},
+  pages     = {1622-1632}
 }
 ```

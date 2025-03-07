@@ -1,0 +1,31 @@
+project_name: "Single-Frame-SMPL-Estimation"
+exp: DomainAdaptation
+run: "target-insta"
+input:
+  dir: example
+  img_size:
+    - 720
+    - 1280
+hydra:
+  run:
+    dir: .
+seed: 1
+model:
+  name: Key2Mesh
+train:
+  mode: "target"
+  pretrained: ""
+  num_hidden: 1024
+  dom_num_hidden: 1024
+  jitter_aug: True
+  lr: 0.0001
+  critic_lr: 0.0001
+  epoch: 5
+  occ_prob: 0.2
+  k_critic: 10
+  k_fe: 1
+loss:
+  gradient_penalty: 50.0
+  target_joint2d: 10.0
+  domain_loss: 0.1
+  feature_loss: 20.0
