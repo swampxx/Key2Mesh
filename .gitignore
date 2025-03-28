@@ -21,3 +21,6 @@ eval_3dpw.log
 # IDE files
 .idea/
 .vscode/
+
+# Datasets
+data/3DPW

@@ -79,6 +79,11 @@ def batch_rot_to_angle_axis(R):
     theta = np.arctan2(sin, cos)
     return u * theta[:, None]
 
+def swap_axes(thetas, x=-1.57, y=-1.57, z=0):
+    mat = euler_to_rot([x], [y], [z])
+    global_rotation = batch_rodrigues(thetas[:, :3])
+    thetas[:, :3] = batch_rot_to_angle_axis(mat @ global_rotation)
+    return thetas
 
 class RandomRotateSMPL(object):
     def __init__(self):

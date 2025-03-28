@@ -10,18 +10,24 @@ For more details and to see some cool results, check out the [project page](http
 
 ### Data
 
-We follow VIBE's data preparation steps. Please refer to the [VIBE repository](https://github.com/mkocabas/VIBE) for
-instructions on downloading the required data.
-
+In order to evaluate Key2Mesh on 3DPW, you can use the published `.pt` file under the `data` folder. If you want to
+reproduce the data, make sure that you download 3DPW and place it under the `data` folder and run the script
+`preprocess/preprocess_3DPW.py`.
 After downloading the data, please copy the necessary files to the `data` directory.
 You will need to have the following structure:
 
 ```
- data
+ data/
+ ├── 3DPW/
+ │   ├── imageFiles
+ │   ├── sequenceFiles   
  ├── 3DPW_test.pt
  ├── J_regressor_h36m.npy
  └── SMPL_NEUTRAL.pkl
 ```
+
+For other datasets, we follow VIBE's and LGD's data preparation steps. Please refer to the [VIBE repository](https://github.com/mkocabas/VIBE)
+and [LGD repository](https://github.com/InpatientJam/Learned-Gradient-Descent).
 
 ### Dependencies
 
@@ -30,6 +36,7 @@ You will need to have the following structure:
 * Then, run the following command to install the remaining dependencies: `pip install -r requirements.txt`
 
 ## Demo
+
 The `demo.py` demonstrates how to estimate and visualize SMPL body models from 2D keypoints. A sample dataset is
 provided, which includes raw images and their corresponding OpenPose outputs, serving as a guide for the expected data
 structure. You can run the demo using the provided example or use your own data by updating the configuration.
@@ -70,6 +77,7 @@ This code is built on top of the following work:
 ## Citation
 
 If you find our work useful in your research, please consider citing:
+
 ```
 @InProceedings{Uguz_2024_CVPR,
   author    = {Uguz, Bedirhan and Suat, Ozhan and Karagoz, Batuhan and Akbas, Emre},
